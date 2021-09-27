@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    
-</style>
-<body class="my-3">
+
+<body>
     <h1>Hello World </h1>
-    <a href="/about">About</a>
+
     
 </body>
 </html>
