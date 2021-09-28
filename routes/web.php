@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\UsersController;
+use App\Http\Controllers\CustomerController;
+Use App\Http\Controllers\loginController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,17 +20,30 @@ use App\Http\Controllers\UsersController;
 //     return view('welcome',['name'=>$name]);
 // });
 
+// Route::get('/',function(){
+//     // return redirect("about");
+//     return view('welcome');
+// });
+// Route::get('/about/{name}', function ($name) {
+//     return view('about',["name"=>$name]);
+// });
+// // Route::view("contact","contact");
+
+// Route::get('contact/{address}', [UsersController::class,"viewload"]);
+
+// Route::get('user/{name}', [UserController::class, "showNow"]);
+
+// Route::view('user','users');
+
 Route::get('/',function(){
-    // return redirect("about");
-    return view('welcome');
+    return view('test');
 });
-Route::get('/about/{name}', function ($name) {
-    return view('about',["name"=>$name]);
+
+Route::get('/home',function(){
+    return view('home');
 });
-// Route::view("contact","contact");
 
-Route::get('contact/{address}', [UsersController::class,"viewload"]);
+Route::post('users',[loginController::class,"loginApprove"]);
 
-Route::get('user/{name}', [UserController::class, "showNow"]);
 
-Route::view('user','users');
+// Route::resource('CustomerResources', CustomerController::class);
